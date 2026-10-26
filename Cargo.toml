@@ -1,0 +1,20 @@
+[package]
+name = "sigmaos-screen-shot"
+version = "0.1.0"
+edition = "2021"
+authors = ["SigmaOS Project"]
+description = "Screenshot tool with multiple modes (fullscreen, window, region, timed)"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/AaryanSinghChauhan09/SigmaOS-screen-shot"
+readme = "README.md"
+keywords = ["screenshot", "screen", "image", "sigmaos"]
+categories = ["multimedia"]
+
+[dependencies]
+
+[features]
+default = ["std"]
+std = []
+
+[profile.release]
+opt-level = 3
