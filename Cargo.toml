@@ -1,20 +1,17 @@
 [package]
-name = "sigmaos-screen-shot"
+name = "sigmaos-desktop-component"
 version = "0.1.0"
 edition = "2021"
-authors = ["SigmaOS Project"]
-description = "Screenshot tool with multiple modes (fullscreen, window, region, timed)"
-license = "GPL-3.0-or-later"
-repository = "https://github.com/AaryanSinghChauhan09/SigmaOS-screen-shot"
-readme = "README.md"
-keywords = ["screenshot", "screen", "image", "sigmaos"]
-categories = ["multimedia"]
+authors = ["SigmaOS Team"]
+license = "MIT OR Apache-2.0"
+description = "SigmaOS desktop component with sophisticated implementation"
 
 [dependencies]
+anyhow = "1.0"
+thiserror = "1.0"
+log = "0.4"
+env_logger = "0.10"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
 
-[features]
-default = ["std"]
-std = []
-
-[profile.release]
-opt-level = 3
+[dev-dependencies]
