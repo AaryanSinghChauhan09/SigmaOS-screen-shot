@@ -1,9 +1,23 @@
-//! SigmaOS Screenshot Tool
-//! Screenshot tool with multiple modes (fullscreen, window, region, timed)
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum CaptureMode { FullScreen, ActiveWindow, Region(u32, u32, u32, u32) }
 
-pub mod screenshot;
+#[derive(Debug)]
+pub struct ScreenshotEngine {
+    pub mode: CaptureMode,
+}
 
-pub use screenshot::ScreenshotTool;
-pub use screenshot::ScreenshotConfig;
-pub use screenshot::ScreenshotMode;
-pub use screenshot::ImageFormat;
+impl ScreenshotEngine {
+    pub fn new(mode: CaptureMode) -> Self { Self { mode } }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_screenshot_engine_aaa() {
+        // Arrange & Act
+        let eng = ScreenshotEngine::new(CaptureMode::Region(0, 0, 800, 600));
+        // Assert
+        assert_eq!(eng.mode, CaptureMode::Region(0, 0, 800, 600));
+    }
+}
