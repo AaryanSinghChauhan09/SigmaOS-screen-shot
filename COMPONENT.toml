@@ -1,6 +1,6 @@
 [component]
 name = "SigmaOS-screen-shot"
 tier = 4
-description = "Screen capture utility, rectangular region selector, and image annotation tool inspired by Omasnap"
+description = "Screenshot tool (area, window, full)"
 contracts = ['screenshot-tool', 'region-selector', 'clipboard-image-copier']
 upstream_inspirations = ['https://github.com/omacom/omasnap']
