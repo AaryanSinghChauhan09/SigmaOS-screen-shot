@@ -1,18 +1,18 @@
-# SigmaOS-SigmaOS-screen-shot Component Wiki
+# SigmaOS-screen-shot Component Wiki
 
 ## Overview
-SigmaOS-SigmaOS-screen-shot provides Screenshot tool (area, window, full) for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
+SigmaOS-screen-shot provides component for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
-- Single Responsibility
-- SigmaOS-screen-shot Abstraction
-- Fail-Fast on SigmaOS-screen-shot Initialization Errors
-- Deterministic SigmaOS-screen-shot Setup
-- Clear Abstraction Over SigmaOS-screen-shot APIs
-- Composition over Inheritance for SigmaOS-screen-shot extensions
+- **Single Responsibility**: Each component has a single well-defined purpose
+- **SigmaOS-screen-shot Abstraction**: Clear abstraction over the component's APIs and functionality
+- **Fail-Fast on SigmaOS-screen-shot Initialization Errors**: Fail-fast principle for initialization errors
+- **Deterministic SigmaOS-screen-shot Setup**: Deterministic initialization and configuration
+- **Clear Abstraction Over SigmaOS-screen-shot APIs**: Well-defined, clear APIs
+- **Composition over Inheritance for SigmaOS-screen-shot extensions**: Use composition patterns for extensions
 
 ## Architecture
-SigmaOS-SigmaOS-screen-shot follows a SigmaOS-screen-shot pattern:
+SigmaOS-screen-shot follows a SigmaOS-screen-shot pattern:
 - **SigmaOS-screen-shot Core**: Provides SigmaOS-screen-shot support, SigmaOS-screen-shot management, and SigmaOS-screen-shot tracking
 - **Management**: Supports SigmaOS-screen-shot management, SigmaOS-screen-shot configuration, and SigmaOS-screen-shot lifecycle
 - **Tracking**: Supports SigmaOS-screen-shot status, SigmaOS-screen-shot tracking, and SigmaOS-screen-shot lifecycle
@@ -20,10 +20,10 @@ SigmaOS-SigmaOS-screen-shot follows a SigmaOS-screen-shot pattern:
 
 ## API
 The component provides the following public APIs:
--  - Manage a SigmaOS-screen-shot by given configuration
--  - Register a SigmaOS-screen-shot by given name
--  - Get SigmaOS-screen-shot status and SigmaOS-screen-shot availability
--  - Track SigmaOS-screen-shot management and SigmaOS-screen-shot tracking
+- Manage a SigmaOS-screen-shot by given configuration
+- Register a SigmaOS-screen-shot by given name
+- Get SigmaOS-screen-shot status and SigmaOS-screen-shot availability
+- Track SigmaOS-screen-shot management and SigmaOS-screen-shot tracking
 - Error types for SigmaOS-screen-shot failure scenarios or unsupported SigmaOS-screen-shot types
 
 ## Test Structure (Arrange-Act-ASSERT)
@@ -32,11 +32,8 @@ All tests follow the AAA pattern:
 2. **Act**: Execute the code under test (SigmaOS-screen-shot init, SigmaOS-screen-shot management)
 3. **Assert**: Verify the expected SigmaOS-screen-shot results
 
-Example:
-
-
 ## Development
-- Follows Rust best practices with 
+- Follows best practices with clear abstraction boundaries
 - SigmaOS-screen-shot initialization is best-effort; gracefully degrades on unsupported configurations
 - Comprehensive error types for all SigmaOS-screen-shot failure scenarios
 - Unit tests provided for SigmaOS-screen-shot management and configuration
